@@ -1,5 +1,0 @@
-@INCLUDE = ../../Doxyfile
-PROJECT_NAME = \"Pan And Zoom\"
-PROJECT_NUMBER = 1.003
-QHP_NAMESPACE = com.taodyne.TaoPresentations.modules.PanAndZoom.1.003
-QHP_VIRTUAL_FOLDER = PanAndZoom
