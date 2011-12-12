@@ -46,7 +46,3 @@ include(../crypt_xl.pri)
 
 LICENSE_FILES = pan_and_zoom.taokey.notsigned
 include(../licenses.pri)
-
-QMAKE_SUBSTITUTES = doc/Doxyfile.in
-DOXYFILE = doc/Doxyfile
-include(../modules_doc.pri)
