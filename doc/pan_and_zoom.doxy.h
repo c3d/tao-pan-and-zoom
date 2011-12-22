@@ -1,6 +1,5 @@
 /**
- * @defgroup PanAndZoom Pan and Zoom
- * @ingroup Modules
+ * @taomoduledescription{PanAndZoom, Pan and Zoom}
  *
  * Pan-and-Zoom navigation style for Tao Presentations
  *
@@ -8,6 +7,7 @@
  * 
  * The module provides a ready-to-use navigation model
  *
+ * @endtaomoduledescription{PanAndZoom}
  * @{
  */
 
