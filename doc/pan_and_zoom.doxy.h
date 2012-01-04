@@ -1,6 +1,5 @@
 /**
- * @defgroup PanAndZoom Pan and Zoom
- * @ingroup Modules
+ * @taomoduledescription{PanAndZoom, Pan and Zoom}
  *
  * Pan-and-Zoom navigation style for Tao Presentations
  *
@@ -8,11 +7,7 @@
  * 
  * The module provides a ready-to-use navigation model
  *
- * Here is an example (<a href="examples/pan_and_zoom.ddd">pan_and_zoom.ddd</a>):
- * @include pan_and_zoom.ddd
- *
- * Here is a screen capture of this document:
- * @image html "pan_and_zoom.png" "Output from pan_and_zoom.ddd"
+ * @endtaomoduledescription{PanAndZoom}
  * @{
  */
 
