@@ -111,7 +111,7 @@ paz_cond(tree Body);
  * current @ref paz box.
  *
  * @~french
- * Teste l'élément @ref paz affiché par rapport au c@ref paz courant.
+ * Teste l'élément @ref paz affiché par rapport au @ref paz courant.
  *
  * Dans un élément @ref paz, teste si le @ref paz actuellement affiché est
  * situé entre @p Start at @p End par rapport au bloc @ref paz courant.
