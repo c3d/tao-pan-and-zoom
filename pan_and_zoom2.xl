@@ -1,0 +1,156 @@
+// ****************************************************************************
+//  pan_and_zoom2.xl                                               Tao project
+// ****************************************************************************
+// 
+//   File Description:
+// 
+//    Implement a pan-and-zoom navigation mode
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// ****************************************************************************
+// This document is released under the GNU General Public License.
+// See http://www.gnu.org/copyleft/gpl.html and Matthew 25:22 for details
+//  (C) 2011 Christophe de Dinechin <christophe@taodyne.com>
+//  (C) 2011 Jérôme Forissier <jerome@taodyne.com>
+//  (C) 2011 Catherine Burvelle <cathy@taodyne.com>
+//  (C) 2011 Taodyne SAS
+// ****************************************************************************
+
+licenseS -> 1.0
+licenseK -> 1.0
+licenseT -> 0
+
+// ============================================================================
+// 
+//    High-level interface
+// 
+// ============================================================================
+
+paz_page Body ->
+// ----------------------------------------------------------------------------
+//   Create a page containing PAZ elements
+// ----------------------------------------------------------------------------
+    compute_smooth_step
+    align 0.5
+    vertical_align 0.5
+
+    if not check_license ("PanAndZoom 1.0", false) then
+        if (seconds <> licenseT) then
+            licenseT := seconds
+            licenseK := random (0.9, 1.1)
+        if blink (1.0, 1.0, 300.0) then
+            interpolate_scale2 0.2, 1.02 * licenseK, licenseS
+        else
+            interpolate_scale2 0.2, 0.95 * licenseK, licenseS
+
+    if alt_modifier then
+        locally
+            translatez 100
+            text_box 300, 200, 150, 80,
+                color_hsv 20 * time, 1, 1
+                text "X="
+                text text pazMouseX
+                line_break
+                text "Y="
+                text text pazMouseY
+
+    paz_index := 0
+    interpolate_scale2 0.2, pazTS, pazS
+    interpolate_zangle 0.1, pazTA, pazA
+    interpolate_position 0.15, pazTX, pazTY, pazTZ, pazX, pazY, pazZ
+
+    pazMouseX := mouse_x
+    pazMouseY := mouse_y
+
+    Body
+
+
+paz X:real, Y:real, A:real, S:real, Body ->
+// ----------------------------------------------------------------------------
+//   Emulation of Paz-like behaviors
+// ----------------------------------------------------------------------------
+    paz_index := paz_index + 1
+    paz_cond
+        pazTX := -X
+        pazTY := -Y
+        pazTA := -A
+        pazTS := S
+
+    active_widget
+        click N:integer ->
+        on_click
+            skip_directly_to N
+        click paz_index-1
+
+        scale2 InvS:real -> scale InvS, InvS, 1
+        translate X, Y, 0
+        rotatez A
+        scale2 1.0/S
+        Body
+
+
+paz_box W:real, H:real, Body ->
+// ----------------------------------------------------------------------------
+//    A scaled text box using Paz-properties
+// ----------------------------------------------------------------------------
+    text_box 0, 0, W, H, Body
+
+
+paz_rbox W:real, H:real, Body ->
+// ----------------------------------------------------------------------------
+//    A scaled text box using Paz-properties
+// ----------------------------------------------------------------------------
+    locally
+        color "white", 0.1
+        line_color "black"
+        line_width 2
+        rounded_rectangle 0, 0, W+10, H+10, 50
+    paz_box W, H, Body
+
+
+paz_cond Body ->
+// ----------------------------------------------------------------------------
+//   Execute some code if we are in the current Paz step
+// ----------------------------------------------------------------------------
+    if paz_between(0, 1) then
+        Body
+
+
+paz_between Start:real, End:real ->
+// ----------------------------------------------------------------------------
+//    Return true if between start and end index relative to current
+// ----------------------------------------------------------------------------
+    (smooth_step >= paz_index+Start-1.5 and smooth_step < paz_index+End-1.5)
+
+
+
+// ============================================================================
+// 
+//    State variables
+// 
+// ============================================================================
+
+pazX -> 0.0
+pazY -> 0.0
+pazZ -> 0.0
+pazS -> 1.0
+pazA -> 0.0
+
+pazTX -> 0.0
+pazTY -> 0.0
+pazTZ -> 0.0
+pazTS -> 1.0
+pazTA -> 0.0
+
+pazMouseX -> 0.0
+pazMouseY -> 0.0
+
+paz_index -> 0
+
+
