@@ -40,7 +40,7 @@ paz_page Body ->
     align 0.5
     vertical_align 0.5
 
-    if not check_license ("PanAndZoom 1.0", false) then
+    if not check_impress_or_license ("PanAndZoom 1.0") then
         if (seconds <> licenseT) then
             licenseT := seconds
             licenseK := random (0.9, 1.1)
