@@ -8,10 +8,6 @@
  * 
  * The module provides a ready-to-use navigation model.
  *
- * @code
-import PanAndZoom
- * @endcode
- *
  * @note Depends on the Animate module.
  *
  * @~french
@@ -22,10 +18,6 @@ import PanAndZoom
  * en une grande surface d'affichage, dont seule une partie est visible.
  * Le passage d'une partie à l'autre consiste en un déplacement (rotation,
  * translation, zoom) d'une zone particulière à une autre.
- *
- * @code
-import PanAndZoom
- * @endcode
  *
  * @note Ce module a besoin du module Animate pour fonctionner.
  *
