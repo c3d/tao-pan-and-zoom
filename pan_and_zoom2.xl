@@ -22,9 +22,9 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_check -> check_impress_or_license ("PanAndZoom 1.003")
-
-
+licenseS -> 1.0
+licenseK -> 1.0
+licenseT -> 0
 
 // ============================================================================
 // 
@@ -39,7 +39,16 @@ paz_page Body ->
     compute_smooth_step
     align 0.5
     vertical_align 0.5
-    license_check
+
+    if not check_impress_or_license ("PanAndZoom 1.0") then
+        if (seconds <> licenseT) then
+            licenseT := seconds
+            licenseK := random (0.9, 1.1)
+        if blink (1.0, 1.0, 300.0) then
+            interpolate_scale2 0.2, 1.02 * licenseK, licenseS
+        else
+            interpolate_scale2 0.2, 0.95 * licenseK, licenseS
+
     if alt_modifier then
         locally
             translatez 100
