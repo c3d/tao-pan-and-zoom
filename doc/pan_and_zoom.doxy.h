@@ -40,13 +40,13 @@ import PanAndZoom
  * Create a page containing Pan-and-Zoom contents.
  *
  * The contents of the page is defined by the @a Body variable.
- * There can be only one @ref paz_page per @ref page.
+ * There can be only one @ref paz_page per @p page.
  *
  * @~french
  * Crée une page avec du contenu Pan-and-Zoom.
  *
  * Le contenu est défini par le paramètre @p Body. Il ne peut y avoir qu'un
- * appel à @ref paz_page par @ref page.
+ * appel à @ref paz_page par @p page.
  */
 paz_page(tree Body);
 
@@ -91,7 +91,7 @@ paz_box(real Width, real Height, tree Body);
  * Add a text box with a rounded rectangle around it
  *
  * This is similar to @ref paz_box, but with an
- * additional @ref rounded_rectangle drawn around it.
+ * additional @p rounded_rectangle drawn around it.
  *
  * @~french
  * Ajoute une boîte de texte encadrée dans un contexte @ref paz.
