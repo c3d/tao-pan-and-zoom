@@ -2,7 +2,7 @@
  * @taomoduledescription{PanAndZoom, Pan and Zoom}
  *
  * @~english
- * <tt>import PanAndZoom</tt> - Pan-and-Zoom navigation style for Tao Presentations.
+ * Pan-and-Zoom navigation style for Tao Presentations.
  *
  * PanAndZoom (PAZ) is an interesting presentation navigation model.
  * 
@@ -15,7 +15,7 @@ import PanAndZoom
  * @note Depends on the Animate module.
  *
  * @~french
- * <tt>import PanAndZoom</tt> - Navigation Pan-and-Zoom.
+ * Navigation Pan-and-Zoom.
  *
  * Le module PanAndZoom (PAZ) fournit des commandes pour exploiter un
  * mode d'affichage et de navigation particulier. La page est transformée
