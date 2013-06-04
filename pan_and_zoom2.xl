@@ -22,8 +22,6 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_check -> check_impress_or_license ("PanAndZoom 1.004")
-
 
 
 // ============================================================================
@@ -39,7 +37,6 @@ paz_page Body ->
     compute_smooth_step
     align 0.5
     vertical_align 0.5
-    license_check
     if alt_modifier then
         locally
             translatez 100
