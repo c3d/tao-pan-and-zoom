@@ -44,9 +44,6 @@ HEADERS += \
 CRYPT_XL_SOURCES = pan_and_zoom2.xl
 include(../crypt_xl.pri)
 
-LICENSE_FILES = pan_and_zoom.taokey.notsigned
-include(../licenses.pri)
-
 QMAKE_SUBSTITUTES = doc/Doxyfile.in
 DOXYFILE = doc/Doxyfile
 DOXYLANG = en,fr
