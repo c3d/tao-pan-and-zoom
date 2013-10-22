@@ -7,9 +7,9 @@
  * 
  * The module provides a ready-to-use navigation model.
  *
-@code
+ * @code
 import PanAndZoom
-@endcode
+ * @endcode
  *
  * @note Depends on the Animate module.
  *
@@ -23,9 +23,9 @@ import PanAndZoom
  * Le passage d'une partie à l'autre consiste en un déplacement (rotation,
  * translation, zoom) d'une zone particulière à une autre.
  *
-@code
+ * @code
 import PanAndZoom
-@endcode
+ * @endcode
  *
  * @note Ce module a besoin du module Animate pour fonctionner.
  *
