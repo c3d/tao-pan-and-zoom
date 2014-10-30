@@ -1,7 +1,7 @@
 /**
  * @~english
  * @taomoduledescription{PanAndZoom, Pan and Zoom}
- * <tt>import PanAndZoom</tt> - Pan-and-Zoom navigation style for Tao Presentations.@n
+ * <tt>import PanAndZoom</tt> - Pan-and-Zoom navigation style for Tao3D.@n
  *
  * PanAndZoom (PAZ) is an interesting presentation navigation model.
  * 
