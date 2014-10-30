@@ -21,7 +21,6 @@ MODINSTDIR = pan_and_zoom
 include(../modules.pri)
 
 OTHER_FILES = pan_and_zoom.xl \
-    pan_and_zoom2.xl \
     doc/pan_and_zoom.png \
     doc/pan_and_zoom.ddd \
     icon.png
@@ -40,9 +39,6 @@ INSTALLS    -= thismod_bin
 
 HEADERS += \
     doc/pan_and_zoom.doxy.h
-
-CRYPT_XL_SOURCES = pan_and_zoom2.xl
-include(../crypt_xl.pri)
 
 QMAKE_SUBSTITUTES = doc/Doxyfile.in
 DOXYFILE = doc/Doxyfile
